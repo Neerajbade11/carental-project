@@ -1,0 +1,35 @@
+/* cars section*/
+.cars-section {
+    text-align: center;
+    padding-top: var(--fs-700);
+  }
+.cars-card-list{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-block: 2rem;
+  }
+  
+.card-sections{
+    border-radius: var(--fs-600);
+  }
+  
+.view-btn{
+    font-size: var(--fs-600);
+    padding-block: 1rem;
+    padding-inline: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgb(154, 154, 154);
+    color:#ffffff;
+    border-radius: 0.5rem;
+}
+.container > .header{
+  font-size: 2rem;
+  font-weight: var(--fw-semi-bold);
+  margin-bottom: var(--fs-800);
+}
+.main-header{
+  padding-top: 2rem;
+}

@@ -1,0 +1,73 @@
+.profile-card{
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+ 
+    margin-top: 1rem;
+    max-width: 22rem;
+}
+.profile-item{
+    display: flex;
+    place-items: center;
+}
+
+.profile-item > :nth-child(2){
+    margin-left: .5rem;
+   
+}
+
+.profile-img{
+   min-height:1rem;
+   max-height: 2rem;
+   border-radius: 50%;
+}
+
+.arrow-item{
+    display: flex;
+    gap: 0.5rem;
+    user-select: none;
+}
+
+
+.quote{
+    position: relative;
+    height: 130px;
+    
+}
+.quote-icon{
+    position: absolute;
+}
+
+.rating{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.rating-item{
+    color: gold;
+    font-size: 0.8rem;
+    margin-right: 0.2rem;
+}
+.quote > p{
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    bottom: 30px;
+    right: 40px;
+    font-size: clamp(0.5rem, 0.2873rem + 0.8101vw, 0.9rem);
+    
+}
+.comment{
+    font-weight: 200;
+}
+.quote > :nth-child(1){  
+    top: 0;
+    left: 0;
+    
+}
+.quote > :nth-child(3){ 
+    bottom: 0;
+    right: 0;
+    
+}
+

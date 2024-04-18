@@ -1,0 +1,17 @@
+/* brand-section */
+.brand-section{
+    margin-top: 6rem;
+  }
+  .brand-container{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+     
+    }
+    
+    .brand-container > img{
+      width: clamp(5rem, 6vw + 1rem, 10rem);
+    }
+    
+  
+    

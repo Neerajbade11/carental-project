@@ -1,0 +1,32 @@
+
+
+.input-content > p{
+    font-size: 1.1rem;
+    
+}
+.input-content > div> input ,.input-btn{
+    font-size: 1.1rem;
+}
+.input-content > div> input,.arrow-btn {
+    color: white;
+    margin-left: .5rem;
+}
+.input-btn{
+    display: flex;
+}
+.input-content > div , .input-btn{
+    padding: 1rem;
+}
+.input-content > div {
+    display: flex;
+    align-items: center;
+    
+}
+
+input:focus{
+    outline: none;
+    
+}
+.input-icon{
+    color: rgba(154, 154, 154, 0.63);
+}

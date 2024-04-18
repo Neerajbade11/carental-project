@@ -1,0 +1,29 @@
+  /* testimonals */
+  *{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .testomonial{
+      margin-bottom: 0;
+      border-radius: 0;
+  }
+    
+  .testomonial-content{
+    padding-block: 4rem;
+    
+  }
+  
+  
+  
+  .testomonial-content > div> h2{
+    font-size: clamp(1rem, 0.1684rem + 2.1353vw, 3rem);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .testomonial-content > div > p{
+    color: rgb(162, 161, 161);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 200;
+  }
