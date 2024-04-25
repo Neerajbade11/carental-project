@@ -7,6 +7,10 @@
   
   .nav-section{
     background: rgba(0, 0, 0, 1);
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    z-index: 700;
   }
   
   .nav-bar{
@@ -14,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     padding-block: var(--fs-600);
+    
   }
   
   .fa-bars{
@@ -21,14 +26,50 @@
     
   }
   
-  nav{
+ 
+  
+  .nav-bar > .primary-nav,.nav-bar > .nav-btn {
     display: none;
   }
-  
-  .nav-bar > div{
-    display: none;
+  .mobile-nav{
+    background-color: rgb(0, 0, 0);
+    left: -100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    transition: all .5s ease-in;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-  
+  .mobile-nav-list{
+    line-height: 2.5;
+    font-size: 1.5rem;
+  }
+  .open-nav{
+    left: 0; 
+    transition: all .5s ease-in; 
+  }
+  .cancle-icon{
+    display: block;
+    color: aliceblue;
+  }
+
+  .menu-icon{
+    cursor: pointer;
+    z-index: 1111;
+    transition: all .5s ease;
+    
+  }
+  .cancel-icon{
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    right: 3%;
+  }
   
   
   nav > ul > li> a:hover{
@@ -36,17 +77,25 @@
     color: var(--clr-brands);
   }
   
-  @media (min-width:780px) {
+  @media (min-width:911px)  {
+    .nav-section{
+      position: relative;
+    }
     nav  {
       display: flex;
     }
-    .nav-bar > div{
+    .nav-bar > .primary-nav, .nav-bar >.nav-btn{
       display: block;
+    }
+    .mobile-nav{
+      display: none;
     }
     nav > ul {
       display: flex;
     }
-  
+    .cancle-icon{
+      display: none;
+    }
     nav > ul > li {
       margin-left: var(--fs-700);
     }  
@@ -58,9 +107,11 @@
     .even-columns{
       grid-template-columns: 1fr 1fr; 
     }
+    .hamburger-icon{
+      display: none;
+    }
   
-  
-  
+    
     .hero-wrapper{
       --pt-1500 : 7rem;
       padding-block: var(--pt-1500);
@@ -96,5 +147,8 @@
     .unorder-card{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+    }
+    .menu-icon{
+      display: none;
     }
   }

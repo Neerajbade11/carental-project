@@ -119,21 +119,22 @@ h3{
 .bg{
   background-color: var(--bg);
 }
-.bg > *{
-  padding-block: 2rem;
-}
+
 button{
   border: 0;
-  margin-left: 0.4rem;
   padding-inline: 1.5rem;
   padding-block: 0.2rem;
   border-radius: 0.3rem;
   cursor: pointer;
 }
 
+
 .btn{
   background-color: var(--btn-bg);
   color: white;
+}
+.arrow-btn{
+  margin-left: 1.5rem;
 }
 
 .transp-btn{
@@ -147,48 +148,22 @@ button{
 
 
 /* input sections */
-.flex-wrap{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
 
-input{
-  background-color: transparent;
-  border: 0;
-  
-}
 
-.input-content, .search-btn{
-  padding-block: clamp(40px, 3vw + var(--fs-400), 90px);
-}
 
-.input-content > p{
-  margin-bottom: var(--fs-600);
-}
-
-.input-content> div{
-  border: 2px solid rgba(154, 154, 154, 0.63);
-  padding-block: 0.2rem;
-  border-radius: 0.5rem;
-}
-
-.search-btn{
-  align-self: flex-end;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .even-columns  > div,.cars-card-list, .tabs-card-item{
     scale: .8;
-    
     opacity: 0;
     transform-origin: center;
     animation: fade-in linear forwards ;
     animation-timeline: view(); /* Specify the animation timeline */
-    animation-range: 70px 550px; /* Specify the animation range */
+    animation-range: 70px 400px; /* Specify the animation range */
   }
 
-
+  
+ 
   @keyframes fade-in {
     to {
       scale: 1;
@@ -210,6 +185,9 @@ footer{
 
 
 @media (min-width:780px) {
+  .left-space-btn{
+    margin-left: .7rem;
+  }
   nav  {
     display: flex;
   }

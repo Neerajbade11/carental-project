@@ -1,3 +1,7 @@
+import { FaCar } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { FaDoorOpen } from "react-icons/fa";
+import { LuThermometerSnowflake } from "react-icons/lu";
 import './index.css'
 
 const Features = props =>{
@@ -6,7 +10,6 @@ const Features = props =>{
 
     return (
         <li className='car-card-item'>
-            
                 <div className='container'>
                     <div>
                         <img src={carImage} alt={carName} className='car-img' />
@@ -18,13 +21,13 @@ const Features = props =>{
                 </div>
                 <div className='container'>
                     <ul className='car-details'>
-                        <li><i class="fa-solid fa-car"></i>
+                        <li><FaCar />
                         <p>{carModel}</p></li>
-                        <li><i class="fa-regular fa-user"></i>
+                        <li><FaUser />
                         <p>{carSeats} Seats</p></li>
-                        <li><i class="fa-solid fa-door-open"></i>
+                        <li><FaDoorOpen />
                         <p>{carDoors} Doors</p></li>
-                        <li><i class="fa-regular fa-snowflake"></i>
+                        <li><LuThermometerSnowflake />
                         <p>AC/Heater</p></li>
                     </ul>
                 </div>

@@ -75,7 +75,7 @@ const Vehicles = () => {
               <h2 className='header'>Our Featured Car</h2>
               <div className='cars-container'>
                 <ul className='cars-card-list'>
-                  {cars.map(eachCar=> <CarItem key= {eachCar.id} eachCar={eachCar} />)}
+                  {cars.map(eachCar=> <CarItem key={eachCar.carName} eachCar={eachCar} />)}
                 </ul>
               </div>
               <Link to="/vehicles"><button className='btn view-btn'> View All Cars</button></Link>

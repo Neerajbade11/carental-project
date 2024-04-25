@@ -2,16 +2,31 @@
 .brand-section{
     margin-top: 6rem;
   }
-  .brand-container{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-     
-    }
+.brand-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
     
-    .brand-container > img{
-      width: clamp(5rem, 6vw + 1rem, 10rem);
+.brand-container > img{
+  width: clamp(5rem, 6vw + 1rem, 10rem);
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .brand-container > img{
+    scale: .8;
+    animation: scroll linear  forwards;
+    
+    animation-timeline: view();
+    animation-range: 110px 400px;
+  }
+
+  @keyframes scroll {
+    to {
+      scale: 1;
     }
+  }
+}
     
   
     

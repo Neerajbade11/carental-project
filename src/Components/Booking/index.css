@@ -1,32 +1,82 @@
-
-
-.input-content > p{
-    font-size: 1.1rem;
+.booking-section > .card-sections {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.155); 
+}
+.booking-narrow-wrapper{
+    width: min(85%, 100% - 3rem);
+    margin-inline: auto;
+}
+.box-form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    flex-direction: column;
     
+    grid-gap: 1rem;
+    padding-block: 3rem;
 }
-.input-content > div> input ,.input-btn{
-    font-size: 1.1rem;
+.box-form-item > p{
+    font-size: 1.3rem;
+    font-weight: 300; 
+    margin-bottom: 1rem;
 }
-.input-content > div> input,.arrow-btn {
-    color: white;
-    margin-left: .5rem;
-}
-.input-btn{
-    display: flex;
-}
-.input-content > div , .input-btn{
-    padding: 1rem;
-}
-.input-content > div {
+
+.box-form-item> div{
     display: flex;
     align-items: center;
     
+}
+.box-form-item > div> input{
+    background: transparent;
+    border: 0;
+    color: rgba(154, 154, 154, 0.63);
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-overflow:inherit;
+}
+.box-form-item > div{
+    flex-grow: 1;
+    border: 2px solid rgba(154, 154, 154, 0.63);
+    padding-block: 0.2rem;
+    border-radius: 0.5rem;
+    padding: 1.3rem;
+    flex-shrink: 1;
+}
+.box-form >.submit-btn{
+    display: flex;
+    padding: calc(1.3rem  + 2px);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--btn-bg);
+    color: white;
+    align-self: flex-end;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 0;
+}
+input{
+    overflow: hidden;
+    font-size: 0.8rem;
 }
 
 input:focus{
     outline: none;
     
 }
+
 .input-icon{
     color: rgba(154, 154, 154, 0.63);
+}
+
+@media  (min-width:768px)  {
+    .box-form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+   
+}
+@media screen and (min-width:1100px) {
+    .box-form{
+        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
 }

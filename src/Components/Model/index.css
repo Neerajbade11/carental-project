@@ -4,6 +4,7 @@
   }
   .wrapper{
     display: grid;
+    padding-block: 6rem;
   }
 
 
@@ -40,4 +41,32 @@
 }
 .model-section > .wrapper{
   margin-block: 3rem;
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .wrapper > div:first-child{
+    transform: translateX(-50%);
+    
+    opacity: 0;
+    animation: slide linear forwards;
+    animation-timeline: view();
+    animation-range: 200px 400px;
+  }
+  
+  .wrapper > div:nth-child(1){
+    opacity: 0;
+    animation: slide linear forwards;
+    animation-timeline: view();
+    animation-range: 200px 400px;
+  }
+
+  @keyframes slide{
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
 }

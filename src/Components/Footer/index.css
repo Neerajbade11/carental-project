@@ -54,3 +54,12 @@
   width: clamp(5rem, 2rem + 9.7524vw, 11rem);
   margin-right: 1rem;
 }
+.footer-content > div{
+  margin-top: 1.4rem;
+}
+
+@media (min-width:710px){
+  .footer-content > div{
+    margin-top: 0;
+  }
+}
