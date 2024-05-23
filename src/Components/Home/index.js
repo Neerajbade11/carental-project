@@ -6,6 +6,7 @@ import Model from '../Model'
 import Vehicles from '../Vehicles'
 import Testimonials from '../Testimonials'
 import Footer from '../Footer'
+
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 import './index.css'
@@ -44,8 +45,7 @@ class Home extends Component {
   render(){
     const {isVisible} = this.state
     return (
-      <main className='bg'>
-        
+      <main className='bg'>        
         <section className='home-section ' >
             <div className='container'>
               <div className='arrow-container'>
@@ -70,6 +70,7 @@ class Home extends Component {
         </section>
         
         <Booking/>
+      
         <Brands/>
         <About/>
         <Model/>

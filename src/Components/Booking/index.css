@@ -1,5 +1,6 @@
 .booking-section > .card-sections {
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.155); 
+    position: relative;
 }
 .booking-narrow-wrapper{
     width: min(85%, 100% - 3rem);
@@ -55,6 +56,7 @@
 input{
     overflow: hidden;
     font-size: 0.8rem;
+    text-overflow: ellipsis;
 }
 
 input:focus{
@@ -64,7 +66,53 @@ input:focus{
 
 .input-icon{
     color: rgba(154, 154, 154, 0.63);
+    margin-right: 0.5rem;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+
+.no-scroll {
+    overflow: hidden;
+  }
+  
+
+  .reservation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.272);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11111;
+    
+  }
+  
+ 
+  .reservation{
+    position: relative;
+    
+  }
+  
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: red;
+  }
+  
 
 @media  (min-width:768px)  {
     .box-form{
@@ -72,7 +120,9 @@ input:focus{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
-   
+    .reservation{
+        top: 5%;
+    }
 }
 @media screen and (min-width:1100px) {
     .box-form{

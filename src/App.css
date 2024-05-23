@@ -40,6 +40,10 @@
   font: inherit;
   user-select: auto;
 }
+* {
+  scrollbar-color: #323232 #fff;
+  scrollbar-width: thin;
+}
 
 
 html,
