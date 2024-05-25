@@ -1,7 +1,10 @@
+import { useState } from "react";
+
+
 import { IoLocationSharp } from "react-icons/io5";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { SlCalender } from "react-icons/sl";
-import { useState } from "react";
+
 import ReservationForm from "../ReservationForm";
 
 import "./index.css"
@@ -9,22 +12,19 @@ import "./index.css"
 
 const Booking = () => {
     const [bookingOpen, setBooking] = useState(false)
-
-    const openReservation = () => {
-      setBooking(true)
-      document.body.classList.add('no-scroll');
-    }
-    const closeReservation = () => {
-      setBooking(false);
-      document.body.classList.remove('no-scroll'); // Allow page scrolling
+   
+    const toggleReservation = () => {
+      setBooking((prev) => !prev);
+      document.body.classList.toggle('no-scroll');
     };
-     const inputValue = (e) => {
+
+    const inputValue = (e) => {
       console.log(e.target.value)
     }
 
     const handleSubmit = (event) =>{
       event.preventDefault(); 
-      openReservation();
+      toggleReservation(); 
     }
 
    
@@ -56,7 +56,7 @@ const Booking = () => {
                       </div>
                     </div>
                   
-                      <button   type="submit" className='submit-btn' onClick={openReservation}>search <AiOutlineArrowRight className="arrow-btn" size={25}/></button>
+                      <button   type="submit" className='submit-btn' >search <AiOutlineArrowRight className="arrow-btn" size={25}/></button>
                   
                   </form>
                            
@@ -65,10 +65,9 @@ const Booking = () => {
           </section>
            
           {bookingOpen && (
-            <div className="reservation-overlay" onClick={closeReservation}>
+            <div className="reservation-overlay" onClick={toggleReservation}>
               <div className="reservation" onClick={(e) => e.stopPropagation()}>
-                <ReservationForm />
-               
+                <ReservationForm  toggleReservation={ toggleReservation} />
               </div>
             </div>
           )}

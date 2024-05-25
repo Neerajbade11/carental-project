@@ -28,7 +28,7 @@ class Header extends Component{
                                     <li><Link to="/About">ABOUT</Link></li>
                                     <li><Link to="/vehicles" >VEHICLE</Link></li>
                                     <li><Link to="/Testimonials">TESTIMONIALS</Link></li>
-                                    <li><a href='#CONTACT'>CONTACT</a></li>
+                                    <li><Link to="/Footer">CONTACT</Link></li>
                                 </ul>
                             </nav>
                             <nav className={`mobile-nav ${isOpen && 'open-nav'}`}>

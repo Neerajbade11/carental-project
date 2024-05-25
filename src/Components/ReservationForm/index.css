@@ -22,10 +22,10 @@
     justify-content: space-between;
     font-weight: 600;
 }
-.reservation-content > * > h3, .date-content h3{
+.reservation-content > * > h3, .date-content h3,.car-container> h3{
     font-size: clamp(1.4rem, 1.195vh + 1rem, 1.9rem);
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .reservation-content > * > p{
     color:   rgb(218, 214, 214) ;
@@ -46,6 +46,12 @@
 }
 .reservation-model-message > *{
     margin-bottom: 0.7rem;
+}
+.car-images-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem
 }
 .reservation-wrapper{
     display: grid;
@@ -78,6 +84,15 @@
     border-radius: 0.2rem;
     background-color: var(--bg-icons);
     color: white;
+    margin-top: 0.2rem;
+}
+.check-box{
+    display: flex;
+    align-items: center;
+    margin-right: 0.4rem;
+}
+.car-image{
+    height: 13rem;
 }
 .reserve-btn{
     margin-block: 2rem;
@@ -87,12 +102,17 @@
 hr{
     color: (154, 154, 154)
 }
+
 .reserve-btn > button{
     padding: 1rem;
     background-color: var(--btn-bg);
     color: #fff;
-    border: 1px solid rgb(154, 154, 154); ;
+    border: 1px solid rgb(154, 154, 154); 
+    font-size: 1.1rem;
+    font-weight: 500;
 }
+
+
 @media screen and (min-width:720px) {
     .reservation-wrapper{
         grid-template-columns: 1fr 1fr;
